@@ -1,0 +1,55 @@
+% tikz styles for flowcharts
+\tikzset{
+	startstop/.style={
+			rectangle,
+			rounded corners,
+			minimum width=3cm,
+			minimum height=1cm,
+			text centered,
+			draw=black,
+			fill=red!30
+		},
+	io/.style={
+			trapezium,
+			trapezium left angle=70,
+			trapezium right angle=110,
+			minimum width=3cm,
+			minimum height=1cm,
+			text centered,
+			draw=black,
+			fill=blue!30
+		},
+	process/.style={
+			rectangle,
+			minimum width=3cm,
+			minimum height=1cm,
+			text centered,
+			draw=black,
+			fill=orange!30
+		},
+	decision/.style={
+			diamond,
+			aspect=2,
+			minimum width=3cm,
+			text centered,
+			draw=black,
+			fill=green!30
+		},
+	arrow/.style={
+			thick,
+			->,
+			>=stealth
+		},
+	prep/.style={
+			chamfered rectangle,
+			chamfered rectangle xsep=2cm,
+			draw,
+			thick,
+			minimum width=5cm,
+			minimum height=1cm,
+			text centered,
+			text width=2.5cm,
+			font=\small,
+			fill=yellow!30
+		},
+}
