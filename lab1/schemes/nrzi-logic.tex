@@ -1,0 +1,30 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=0.41, very thick]
+		\def\bits{1,1,0,1,0,0,1,0,1,0,1,1,1,0,0,1,0,1,0,0,1,1,0,1,0,0,1,0,0,1,1,1,0,1,0,1,1,1,1,0}
+
+		\gdef\y{0}
+		\foreach \b [count=\x from 0] in \bits {
+			\draw[dashed, gray, thin] (\x+1,-1) -- (\x+1,2);
+			\node at (\x+0.5, 2.5) {\small \b};
+			\ifnum\b=1
+				\ifnum\y=1
+					\draw (\x,1) -- (\x,0) -- (\x+1,0);
+					\xdef\y{0}
+				\else
+					\draw (\x,0) -- (\x,1) -- (\x+1,1);
+					\xdef\y{1}
+				\fi
+			\else
+				\draw (\x,\y) -- (\x+1,\y);
+			\fi
+		}
+
+		\draw[dashed, gray, thin] (0,0) -- (32,0);
+		\draw[->] (0,-1.5) -- (0,2);
+
+		\node[left] at (0,0) {0};
+		\node[left] at (0,1) {1};
+	\end{tikzpicture}
+	\caption{NRZI-кодирование избыточного сообщения}
+\end{figure}
