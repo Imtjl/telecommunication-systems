@@ -34,6 +34,16 @@
 % \titleformat{\section}[hang]{\large\bfseries}{\thesection.}{1em}{}
 % \titlespacing*{\section}{0pt}{*2}{*1}
 
+% important macro for rounded corners in pictures
+\newcommand{\cutpic}[3]{
+	\savebox{\picbox}{\includegraphics[width=#2]{#3}}
+	\tikz\node [draw, rounded corners=#1, line width=4pt,
+		color=white, minimum width=\wd\picbox,
+		minimum height=\ht\picbox, path picture={
+				\node at (path picture bounding box.center) {
+					\usebox{\picbox}};
+			}] {};}
+
 % -----------------------------------------------------
 
 \input{../common/title-modern-lab}
@@ -45,7 +55,7 @@
 
 % Title page
 % old basic group uir title
-\input{../common/title-old-uir}
+\input{title-old-uir}
 
 % -------------------------------
 
@@ -81,6 +91,7 @@
 % -------------------------------
 
 \section{Допустимые уровни шума, рассинхронизации и затухания}
+\input{3-stage}
 
 % -------------------------------
 
