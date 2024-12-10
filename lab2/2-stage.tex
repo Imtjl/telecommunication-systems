@@ -75,10 +75,15 @@
 
 Сремблирование -  это также разновидность логического кодирования, суть которого заключается в применении определённого полинома к методу кодирования, в данном случае, NRZ, с целью уменьшения длинных последовательностей <<0>> и <<1>>.
 
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{10pt}
+
 \begin{wrapfigure}{r}{0.58\textwidth}
 	\centering
 	\cutpic{0.2cm}{11cm}{./data/ideal_nrz_scrambling.png}
+	% \includegraphics[width=0.95\linewidth]{./data/ideal_nrz_scrambling.png}
 	\caption{F =  0.9 - 5.0 Мгц}
+	\vspace{-140pt}
 \end{wrapfigure}
 
 Проведя исследования, получили минимальную полосу пропускания идеального канала связи $F = 0.9 - 5.0 \, \text{Мгц}$, то есть более широкую полосу пропускания, чем в базовом NRZ.
